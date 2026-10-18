@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Formula Condensed';
-  font-weight: 700 900;
-  src: local('Formula Condensed Bold'), local('FormulaCondensed-Bold'), local('Formula Condensed');
+  font-family: "Formula Condensed";
+  src: url("./assets/PPFormula-CondensedBlack.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
   font-display: swap;
 }
 
