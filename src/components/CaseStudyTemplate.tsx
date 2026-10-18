@@ -645,7 +645,7 @@ export const CaseStudyTemplate: React.FC<CaseStudyTemplateProps> = ({
         </div>
 
         <div className="lg:col-span-8 space-y-6">
-          <h2 className="font-['Formula_Condensed','Barlow_Condensed','Bebas_Neue',sans-serif] text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-[#0a0a0a] leading-tight">
+          <h2 className="font-['Formula_Condensed','Barlow_Condensed',sans-serif] text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-[#0a0a0a] leading-tight">
             {project.briefSummary}
           </h2>
           {project.narrativeStrategy && (

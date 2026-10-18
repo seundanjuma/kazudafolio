@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Formula Condensed";
-  src: url("./assets/PPFormula-CondensedBlack.otf") format("opentype");
+  font-family: 'Formula Condensed';
+  src: url('./assets/PPFormula-CondensedBlack.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @theme {
-  --font-display: 'Formula Condensed', 'Barlow Condensed', 'Bebas Neue', sans-serif;
+  --font-display: 'Formula Condensed', 'Barlow Condensed', sans-serif;
   --font-body: 'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-sans: 'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -55,7 +55,7 @@
     font-family: var(--dirt-font-display);
     text-transform: uppercase;
     letter-spacing: 0.01em;
-    font-weight: 800;
+    font-weight: 900;
   }
 }
 

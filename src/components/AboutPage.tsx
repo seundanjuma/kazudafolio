@@ -70,7 +70,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenContact }) => {
             <span className="font-['Inter'] text-[10px] font-bold uppercase text-[rgba(10,10,10,0.4)] block">
               DISCIPLINE 01
             </span>
-            <h3 className="font-['Formula_Condensed','Barlow_Condensed','Bebas_Neue',sans-serif] text-3xl font-bold uppercase text-[#0a0a0a]">
+            <h3 className="font-['Formula_Condensed','Barlow_Condensed',sans-serif] text-3xl font-bold uppercase text-[#0a0a0a]">
               Brand Identity Systems
             </h3>
             <p className="font-['Inter'] text-xs sm:text-sm text-[rgba(10,10,10,0.65)] leading-relaxed">
@@ -88,7 +88,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenContact }) => {
             <span className="font-['Inter'] text-[10px] font-bold uppercase text-[rgba(10,10,10,0.4)] block">
               DISCIPLINE 02
             </span>
-            <h3 className="font-['Formula_Condensed','Barlow_Condensed','Bebas_Neue',sans-serif] text-3xl font-bold uppercase text-[#0a0a0a]">
+            <h3 className="font-['Formula_Condensed','Barlow_Condensed',sans-serif] text-3xl font-bold uppercase text-[#0a0a0a]">
               Strategic Pitch Decks
             </h3>
             <p className="font-['Inter'] text-xs sm:text-sm text-[rgba(10,10,10,0.65)] leading-relaxed">
@@ -108,7 +108,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenContact }) => {
       <section className="p-8 sm:p-12 rounded-[8px] border border-[rgba(10,10,10,0.08)] bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-6 font-['Inter'] text-xs shadow-xs">
         <div className="space-y-1">
           <span className="text-[10px] uppercase font-semibold text-[rgba(10,10,10,0.45)]">COLLABORATION STATUS</span>
-          <h4 className="font-['Formula_Condensed','Barlow_Condensed','Bebas_Neue',sans-serif] text-2xl sm:text-3xl font-bold uppercase text-[#0a0a0a]">
+          <h4 className="font-['Formula_Condensed','Barlow_Condensed',sans-serif] text-2xl sm:text-3xl font-bold uppercase text-[#0a0a0a]">
             Available for Select Brand & Deck Commissions
           </h4>
         </div>

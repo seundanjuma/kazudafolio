@@ -103,7 +103,7 @@ export const ContactPage: React.FC = () => {
                 <div className="w-10 h-10 rounded-full bg-black/5 text-[#0a0a0a] mx-auto flex items-center justify-center font-bold">
                   ✓
                 </div>
-                <h3 className="font-['Formula_Condensed','Barlow_Condensed','Bebas_Neue',sans-serif] text-3xl font-bold uppercase text-[#0a0a0a]">
+                <h3 className="font-['Formula_Condensed','Barlow_Condensed',sans-serif] text-3xl font-bold uppercase text-[#0a0a0a]">
                   Communication Logged
                 </h3>
                 <p className="text-[rgba(10,10,10,0.65)] max-w-sm mx-auto leading-relaxed">
