@@ -10,7 +10,7 @@ export const MAINTENANCE_MODE = true;
 /**
  * URL for the previous PDF portfolio.
  */
-export const PREVIOUS_PORTFOLIO_PDF_URL = '/stephen-oluwasanmi-portfolio.pdf';
+export const PREVIOUS_PORTFOLIO_PDF_URL = 'https://bit.ly/kazudafolio';
 
 export const HoldingScreen: React.FC = () => {
   return (
