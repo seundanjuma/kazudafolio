@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Header } from './components/Header';
 import { HomePage } from './components/HomePage';
 import { WorkPage, WORK_PROJECTS } from './components/WorkPage';
@@ -101,66 +102,69 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
-  if (MAINTENANCE_MODE) {
-    return <HoldingScreen />;
-  }
-
   return (
-    <div className="min-h-screen flex flex-col bg-[#f2f2ef] text-[#0a0a0a]">
-      {/* Minimal Navigation Bar */}
-      <Header
-        activeTab={activeTab}
-        onTabChange={handleTabChange}
-        hasActiveCaseStudy={Boolean(activeCaseStudy)}
-        onBackToHome={handleBackToHome}
-      />
-
-      {/* Main Content Area */}
-      <main className="flex-1 w-full pb-16">
-        {activeCaseStudy ? (
-          /* Reusable Case Study Template (Dirtverse Wldcntry Layout) */
-          <CaseStudyTemplate
-            project={activeCaseStudy}
-            onNextProject={handleNextCase}
-            onPrevProject={handlePrevCase}
-            onBackToWork={handleBackToWork}
-            onSelectProjectSlug={handleSelectProjectSlug}
+    <>
+      {MAINTENANCE_MODE ? (
+        <HoldingScreen />
+      ) : (
+        <div className="min-h-screen flex flex-col bg-[#f2f2ef] text-[#0a0a0a]">
+          {/* Minimal Navigation Bar */}
+          <Header
+            activeTab={activeTab}
+            onTabChange={handleTabChange}
+            hasActiveCaseStudy={Boolean(activeCaseStudy)}
+            onBackToHome={handleBackToHome}
           />
-        ) : (
-          <>
-            {activeTab === 'home' && (
-              <HomePage
-                snapshots={WORK_SNAPSHOTS}
-                featuredProjects={PROJECTS.filter((p) => p.featured)}
-                onSelectProjectSlug={handleSelectProjectSlug}
-                onNavigateToWork={() => handleTabChange('work')}
-              />
-            )}
 
-            {activeTab === 'work' && (
-              <WorkPage
-                projects={PROJECTS}
+          {/* Main Content Area */}
+          <main className="flex-1 w-full pb-16">
+            {activeCaseStudy ? (
+              /* Reusable Case Study Template (Dirtverse Wldcntry Layout) */
+              <CaseStudyTemplate
+                project={activeCaseStudy}
+                onNextProject={handleNextCase}
+                onPrevProject={handlePrevCase}
+                onBackToWork={handleBackToWork}
                 onSelectProjectSlug={handleSelectProjectSlug}
               />
-            )}
+            ) : (
+              <>
+                {activeTab === 'home' && (
+                  <HomePage
+                    snapshots={WORK_SNAPSHOTS}
+                    featuredProjects={PROJECTS.filter((p) => p.featured)}
+                    onSelectProjectSlug={handleSelectProjectSlug}
+                    onNavigateToWork={() => handleTabChange('work')}
+                  />
+                )}
 
-            {activeTab === 'about' && (
-              <AboutPage
-                onOpenContact={() => handleTabChange('contact')}
-              />
-            )}
+                {activeTab === 'work' && (
+                  <WorkPage
+                    projects={PROJECTS}
+                    onSelectProjectSlug={handleSelectProjectSlug}
+                  />
+                )}
 
-            {activeTab === 'contact' && (
-              <ContactPage />
-            )}
-          </>
-        )}
-      </main>
+                {activeTab === 'about' && (
+                  <AboutPage
+                    onOpenContact={() => handleTabChange('contact')}
+                  />
+                )}
 
-      {/* Shared Footer on non-homepage pages only (HomePage strictly has NO footer) */}
-      {(activeTab !== 'home' || activeCaseStudy !== null) && (
-        <Footer onTabChange={handleTabChange} />
+                {activeTab === 'contact' && (
+                  <ContactPage />
+                )}
+              </>
+            )}
+          </main>
+
+          {/* Shared Footer on non-homepage pages only (HomePage strictly has NO footer) */}
+          {(activeTab !== 'home' || activeCaseStudy !== null) && (
+            <Footer onTabChange={handleTabChange} />
+          )}
+        </div>
       )}
-    </div>
+      <Analytics />
+    </>
   );
 }
