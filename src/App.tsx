@@ -9,6 +9,7 @@ import { Footer } from './components/Footer';
 import { PROJECTS } from './data/projects';
 import { WORK_SNAPSHOTS } from './data/snapshots';
 import { Project } from './types';
+import { HoldingScreen, MAINTENANCE_MODE } from './components/HoldingScreen';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'home' | 'work' | 'about' | 'contact'>('home');
@@ -99,6 +100,10 @@ export default function App() {
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  if (MAINTENANCE_MODE) {
+    return <HoldingScreen />;
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-[#f2f2ef] text-[#0a0a0a]">
