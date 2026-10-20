@@ -34,7 +34,7 @@ export const HoldingScreen: React.FC = () => {
         <div className="pt-2">
           <a
             href={PREVIOUS_PORTFOLIO_PDF_URL}
-            target="_blank"
+            target="_blan"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-[4px] bg-[#0a0a0a] hover:bg-[#222222] text-[#f2f2ef] font-['Inter'] text-xs font-semibold tracking-normal transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0a0a0a]"
           >
